@@ -18,7 +18,22 @@ We do not condone using this project as a means for piracy in any form. This pro
 ## Building on device with ArkOS
 
 * Flash a new sd card with ArkOS
-* Activate dev mode on ArkOS by following these instructions [https://github.com/christianhaitian/arkos/wiki/Building-packages-and-modules-on-your-device]
+* Activate dev mode on ArkOS by following these instructions: https://github.com/christianhaitian/arkos/wiki/Building-packages-and-modules-on-your-device
+* From terminal (either by SSH or by activating terminal and plugging usb keyboard into device) - see faq for your device in ArkOS wiki, e.g. SSH https://github.com/christianhaitian/arkos/wiki/Frequently-Asked-Questions---rg503#q-how-do-i-ssh-into-ArkOS and Terminal https://github.com/christianhaitian/arkos/wiki/Frequently-Asked-Questions---rg503#q-how-can-i-access-a-terminal-physically-on-arkos
+* By default you will start at `/home/ark/`
+* Clone the repository (you can clone the upstream source for latest changes, but will need to clone both RSDKv5 and Sonic Mania Decompilation repositories and copy `Sonic Mania` folder from Sonic Mania Decompilation to RSDKv5 respository to replace `Game` symlink https://github.com/Rubberduckycooly/Sonic-Mania-Decompilation/blob/master/Game)
+```
+git clone --recursive https://github.com/romadu/RSDKv5-Decompilation
+```
+* Compile the source
+```
+make DEBUG=0 STATIC=0 SUBSYSTEM=SDL2 PLATFORM=Linux
+```
+* When the build finishes, copy from `/ark/home/RSDKv5-Decompilation/bin/Linux/SDL2` both files
+** Game.so
+** RSDKv5
+* Replace these files in PortMaster Sonic Mania installation
+* Launch Sonic Mania (using your normal SD card and cfw option) and Sonic Mania Plus should launch
 
 ## Get the source code
 
