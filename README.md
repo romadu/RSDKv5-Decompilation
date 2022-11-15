@@ -19,7 +19,7 @@ We do not condone using this project as a means for piracy in any form. This pro
 
 This guide assumes that [Sonic Mania](https://github.com/christianhaitian/PortMaster/wiki#sonic-mania) has already been installed from [PortMaster](https://github.com/christianhaitian/PortMaster) and is working
 
-* Flash a new sd card with [ArkOS](https://github.com/christianhaitian/arkos)
+* Flash a new sd card with [ArkOS](https://github.com/christianhaitian/arkos/wiki#download-links))
 
 * Activate [dev mode on ArkOS](https://github.com/christianhaitian/arkos/wiki/Building-packages-and-modules-on-your-device) 
 
