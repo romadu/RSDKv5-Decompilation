@@ -27,7 +27,7 @@ This guide assumes that [Sonic Mania](https://github.com/christianhaitian/PortMa
 
 > Note: access terminal either by [SSH](https://github.com/christianhaitian/arkos/wiki/Frequently-Asked-Questions---rg503#q-how-do-i-ssh-into-ArkOS) or by [launching terminal on ArkOS device and plugging in usb keyboard](https://github.com/christianhaitian/arkos/wiki/Frequently-Asked-Questions---rg503#q-how-can-i-access-a-terminal-physically-on-arkos) - refer to faq for your device in ArkOS wiki 
 
-* By default terminal will start at `/home/ark/` and the compiled files will be created in the Linux partition, so it may be necessary to retrieve the files using [SSH sftp file browser](https://github.com/christianhaitian/arkos/wiki/Frequently-Asked-Questions---rg503#q-how-do-i-ssh-into-ArkOS) or use terminal to copy them to Windows-compatible `EASYROMS` partition
+> Note: by default, terminal will launch at `/home/ark/` and the compiled files will be created in subfolders of this Linux partition, so it may be necessary to retrieve the files using [SSH sftp file browser](https://github.com/christianhaitian/arkos/wiki/Frequently-Asked-Questions---rg503#q-how-do-i-ssh-into-ArkOS) or use terminal to copy them to Windows-compatible `EASYROMS` partition
 
 * Clone the repository
 
