@@ -15,19 +15,26 @@ We do not condone using this project as a means for piracy in any form. This pro
 
 # How to Build
 
-## Building on device with ArkOS
+## Building on-device with ArkOS
 
 * Flash a new sd card with ArkOS
 * Activate dev mode on ArkOS by following these instructions: https://github.com/christianhaitian/arkos/wiki/Building-packages-and-modules-on-your-device
-* From terminal compile the source using the following commands (access terminal either by SSH or by activating terminal and plugging usb keyboard into device) - see faq for your device in ArkOS wiki, e.g. SSH https://github.com/christianhaitian/arkos/wiki/Frequently-Asked-Questions---rg503#q-how-do-i-ssh-into-ArkOS and Terminal https://github.com/christianhaitian/arkos/wiki/Frequently-Asked-Questions---rg503#q-how-can-i-access-a-terminal-physically-on-arkos
-* By default you will start at `/home/ark/`
+* From terminal compile the source using the following commands 
+
+> Note: access terminal either by SSH or by activating terminal and plugging usb keyboard into device) - see faq for your device in ArkOS wiki, e.g. SSH https://github.com/christianhaitian/arkos/wiki/Frequently-Asked-Questions---rg503#q-how-do-i-ssh-into-ArkOS and Terminal https://github.com/christianhaitian/arkos/wiki/Frequently-Asked-Questions---rg503#q-how-can-i-access-a-terminal-physically-on-arkos
+
+* By default terminal will start at `/home/ark/` and you'll need to access this location to retrieve the compiled files
 * Clone the repository
 
-`git clone --recursive https://github.com/romadu/RSDKv5-Decompilation`
+```
+git clone --recursive https://github.com/romadu/RSDKv5-Decompilation
+```
 
-* change directory into repository 
+* Change directory into repository 
 
-`cd RSDKv5-Decompilation`
+```
+cd RSDKv5-Decompilation
+```
 
 * Compile the source
 
