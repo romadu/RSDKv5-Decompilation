@@ -19,7 +19,7 @@ We do not condone using this project as a means for piracy in any form. This pro
 
 * Flash a new sd card with ArkOS
 * Activate dev mode on ArkOS by following these instructions: https://github.com/christianhaitian/arkos/wiki/Building-packages-and-modules-on-your-device
-* From terminal (either by SSH or by activating terminal and plugging usb keyboard into device) - see faq for your device in ArkOS wiki, e.g. SSH https://github.com/christianhaitian/arkos/wiki/Frequently-Asked-Questions---rg503#q-how-do-i-ssh-into-ArkOS and Terminal https://github.com/christianhaitian/arkos/wiki/Frequently-Asked-Questions---rg503#q-how-can-i-access-a-terminal-physically-on-arkos
+* From terminal compile the source using the following commands (access terminal either by SSH or by activating terminal and plugging usb keyboard into device) - see faq for your device in ArkOS wiki, e.g. SSH https://github.com/christianhaitian/arkos/wiki/Frequently-Asked-Questions---rg503#q-how-do-i-ssh-into-ArkOS and Terminal https://github.com/christianhaitian/arkos/wiki/Frequently-Asked-Questions---rg503#q-how-can-i-access-a-terminal-physically-on-arkos
 * By default you will start at `/home/ark/`
 * Clone the repository (you can clone the upstream source for latest changes, but will need to clone both RSDKv5 and Sonic Mania Decompilation repositories and copy `Sonic Mania` folder from Sonic Mania Decompilation to RSDKv5 respository to replace `Game` symlink https://github.com/Rubberduckycooly/Sonic-Mania-Decompilation/blob/master/Game)
 ```
