@@ -25,6 +25,10 @@ We do not condone using this project as a means for piracy in any form. This pro
 ```
 git clone --recursive https://github.com/romadu/RSDKv5-Decompilation
 ```
+* change directory into repository 
+```
+cd RSDKv5-Decompilation
+```
 * Compile the source
 ```
 make DEBUG=0 STATIC=0 SUBSYSTEM=SDL2 PLATFORM=Linux
