@@ -31,19 +31,23 @@ We do not condone using this project as a means for piracy in any form. This pro
 
 * Compile the source
 
-`make DEBUG=0 STATIC=0 SUBSYSTEM=SDL2 PLATFORM=Linux`
+```
+make DEBUG=0 STATIC=0 SUBSYSTEM=SDL2 PLATFORM=Linux
+```
 
 * When the build finishes, copy from `/ark/home/RSDKv5-Decompilation/bin/Linux/SDL2` both files
- `Game.so`
- `RSDKv5`
+  - `Game.so`
+  - `RSDKv5`
 
-* Replace these files in PortMaster Sonic Mania installation
+* Replace those files in PortMaster Sonic Mania installation
 * Launch Sonic Mania (using your normal SD card and cfw option) and Sonic Mania Plus should launch
 
- Note: you can compile upstream source for latest updates by:
- * recursively clone both RSDKv5 and Sonic Mania Decompilation repositories and 
- * copy `Sonic Mania` folder from Sonic Mania Decompilation to RSDKv5 respository to replace `Game` symlink https://github.com/Rubberduckycooly/Sonic-Mania-Decompilation/blob/master/Game
- * Modify this line to comment out as shown to fix compile error https://github.com/romadu/RSDKv5-Decompilation/blob/45d1216d00fd5cad4c9cd2e4bd2e5c138d487bbe/RSDKv5/RSDK/User/Dummy/DummyCore.cpp#L114
+> Note: you can compile upstream source for latest updates by:
+  * recursively clone both RSDKv5 and Sonic Mania Decompilation repositories and 
+  * copy `Sonic Mania` folder from Sonic Mania Decompilation to RSDKv5 respository to replace `Game` symlink https://github.com/Rubberduckycooly/Sonic-Mania-Decompilation/blob/master/Game
+  * Modify this line to comment out as shown to fix compile error 
+  
+    `https://github.com/romadu/RSDKv5-Decompilation/blob/45d1216d00fd5cad4c9cd2e4bd2e5c138d487bbe/RSDKv5/RSDK/User/Dummy/DummyCore.cpp#L114`
 
 ## Get the source code
 
