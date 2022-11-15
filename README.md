@@ -35,6 +35,12 @@ This guide assumes that [Sonic Mania](https://github.com/christianhaitian/PortMa
 git clone --recursive https://github.com/romadu/RSDKv5-Decompilation
 ```
 
+* Install dependencies 
+
+```
+sudo apt install libtheora-dev
+```
+
 * Change directory into repository 
 ```
 cd RSDKv5-Decompilation
