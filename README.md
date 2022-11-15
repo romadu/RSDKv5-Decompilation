@@ -15,6 +15,11 @@ We do not condone using this project as a means for piracy in any form. This pro
 
 # How to Build
 
+## Building on device with ArkOS
+
+* Flash a new sd card with ArkOS
+* Activate dev mode on ArkOS by following these instructions [https://github.com/christianhaitian/arkos/wiki/Building-packages-and-modules-on-your-device]
+
 ## Get the source code
 
 * Clone the repo **recursively**, using:
