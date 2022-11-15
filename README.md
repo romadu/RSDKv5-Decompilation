@@ -17,13 +17,18 @@ We do not condone using this project as a means for piracy in any form. This pro
 
 ## Building on-device with ArkOS
 
-* Flash a new sd card with ArkOS
-* Activate dev mode on ArkOS by following these instructions: https://github.com/christianhaitian/arkos/wiki/Building-packages-and-modules-on-your-device
-* From terminal compile the source using the following commands 
+This guide assumes that [Sonic Mania](https://github.com/christianhaitian/PortMaster/wiki#sonic-mania) has already been installed from [PortMaster](https://github.com/christianhaitian/PortMaster) and is working
 
-> Note: access terminal either by SSH or by activating terminal and plugging usb keyboard into device) - see faq for your device in ArkOS wiki, e.g. SSH https://github.com/christianhaitian/arkos/wiki/Frequently-Asked-Questions---rg503#q-how-do-i-ssh-into-ArkOS and Terminal https://github.com/christianhaitian/arkos/wiki/Frequently-Asked-Questions---rg503#q-how-can-i-access-a-terminal-physically-on-arkos
+* Flash a new sd card with [ArkOS](https://github.com/christianhaitian/arkos)
+
+* Activate [dev mode on ArkOS](https://github.com/christianhaitian/arkos/wiki/Building-packages-and-modules-on-your-device) 
+
+* From terminal, compile Sonic Mania source using the following commands 
+
+> Note: access terminal either by [SSH](https://github.com/christianhaitian/arkos/wiki/Frequently-Asked-Questions---rg503#q-how-do-i-ssh-into-ArkOS and Terminal) or by [launching terminal on ArkOS device and plugging in usb keyboard](https://github.com/christianhaitian/arkos/wiki/Frequently-Asked-Questions---rg503#q-how-can-i-access-a-terminal-physically-on-arkos) - refer to faq for your device in ArkOS wiki 
 
 * By default terminal will start at `/home/ark/` and you'll need to access this location to retrieve the compiled files
+
 * Clone the repository
 
 ```
@@ -31,7 +36,6 @@ git clone --recursive https://github.com/romadu/RSDKv5-Decompilation
 ```
 
 * Change directory into repository 
-
 ```
 cd RSDKv5-Decompilation
 ```
@@ -42,17 +46,30 @@ cd RSDKv5-Decompilation
 make DEBUG=0 STATIC=0 SUBSYSTEM=SDL2 PLATFORM=Linux
 ```
 
-* When the build finishes, copy from `/ark/home/RSDKv5-Decompilation/bin/Linux/SDL2` both files
+* When the build finishes, copy both files from `/ark/home/RSDKv5-Decompilation/bin/Linux/SDL2`
   - `Game.so`
   - `RSDKv5`
 
-* Replace those files in PortMaster Sonic Mania installation
-* Launch Sonic Mania (using your normal SD card and cfw option) and Sonic Mania Plus should launch
+> Note: to copy these files using terminal
+  - use the following to copy them to `/roms/ports/sonicmania/` on EASYROMS partition so they can be accessed from pc
+
+```
+mkdir -p /roms/ports/sonicmania && cp ./bin/Linux/SDL2/RSDKv5 /roms/ports/sonicmania/ &&  cp ./bin/Linux/SDL2/Game.so /roms/ports/sonicmania/
+```
+  - use the following to copy them to `/roms2/ports/sonicmania/` on second sd card to overwrite files from existing PortMaster `Sonic Mania` installation, for devices supporting second sd slot
+
+```
+mkdir -p /roms2/ports/sonicmania && cp ./bin/Linux/SDL2/RSDKv5 /roms2/ports/sonicmania/ &&  cp ./bin/Linux/SDL2/Game.so /roms2/ports/sonicmania/
+```
+
+* Replace those two files in PortMaster `Sonic Mania` installation
+
+* Launch Sonic Mania (using your normal SD card and cfw option) and `Sonic Mania Plus` should launch
 
 > Note: you can compile upstream source for latest updates by:
   * recursively clone both RSDKv5 and Sonic Mania Decompilation repositories and 
-  * copy `Sonic Mania` folder from Sonic Mania Decompilation to RSDKv5 respository to replace `Game` symlink https://github.com/Rubberduckycooly/Sonic-Mania-Decompilation/blob/master/Game
-  * Modify this line to comment out as shown to fix compile error 
+  * replace [`Game` symlink](https://github.com/Rubberduckycooly/Sonic-Mania-Decompilation/blob/master/Game) by copying `Sonic Mania` folder from Sonic Mania Decompilation to RSDKv5 respository and renaming the copied folder to `Game` 
+  * Modify [line 114 in DummyCore.cpp](https://github.com/Rubberduckycooly/RSDKv5-Decompilation/blob/d9abcc5b9bc74565aa3b29fdf05686a0001e9c9d/RSDKv5/RSDK/User/Dummy/DummyCore.cpp#L114) by converting it to a comment, as shown, to fix compile error 
   
     `https://github.com/romadu/RSDKv5-Decompilation/blob/45d1216d00fd5cad4c9cd2e4bd2e5c138d487bbe/RSDKv5/RSDK/User/Dummy/DummyCore.cpp#L114`
 
