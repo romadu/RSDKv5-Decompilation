@@ -21,7 +21,7 @@ This guide assumes that [Sonic Mania](https://github.com/christianhaitian/PortMa
 
 * Flash a new sd card with [ArkOS](https://github.com/christianhaitian/arkos/wiki#download-links)
 
-> Note: building on rg351p using ArkOS final does not work. It may be possible to use Wummle fork but that is untested.
+> Note: building on rg351p using ArkOS final does not work. It may be possible to use [Wummle fork](https://github.com/wummle/arkos/wiki) but that is untested (scroll to the bottom of the wiki page to obtain the link for update.sh).
 
 * Activate [dev mode on ArkOS](https://github.com/christianhaitian/arkos/wiki/Building-packages-and-modules-on-your-device) 
 
