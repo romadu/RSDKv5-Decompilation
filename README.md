@@ -21,7 +21,7 @@ This guide assumes that [Sonic Mania](https://github.com/christianhaitian/PortMa
 
 * Flash a new sd card with [ArkOS](https://github.com/christianhaitian/arkos/wiki#download-links)
 
-> Note: building on rg351p using ArkOS final does not work. It may be possible to use [Wummle fork](https://github.com/wummle/arkos/wiki) but that is untested (scroll to the bottom of the wiki page to obtain the link for update.sh).
+> Note: this method does not work on rg351p/m using ArkOS final, even after updating to [Wummle fork](https://github.com/wummle/arkos/wiki)
 
 * Activate [dev mode on ArkOS](https://github.com/christianhaitian/arkos/wiki/Building-packages-and-modules-on-your-device) 
 
@@ -58,6 +58,8 @@ make DEBUG=0 STATIC=0 SUBSYSTEM=SDL2 PLATFORM=Linux
   - `Game.so`
   - `RSDKv5`
 
+* Replace those two files in PortMaster `Sonic Mania` installation
+
 > Note: to copy these files using terminal
   - use the following to copy them to `/roms/ports/sonicmania/` on EASYROMS partition so they can be accessed from pc
 
@@ -69,8 +71,6 @@ mkdir -p /roms/ports/sonicmania && cp ./bin/Linux/SDL2/RSDKv5 /roms/ports/sonicm
 ```
 mkdir -p /roms2/ports/sonicmania && cp ./bin/Linux/SDL2/RSDKv5 /roms2/ports/sonicmania/ &&  cp ./bin/Linux/SDL2/Game.so /roms2/ports/sonicmania/
 ```
-
-* Replace those two files in PortMaster `Sonic Mania` installation
 
 * Launch Sonic Mania (using your normal SD card and cfw option) and `Sonic Mania Plus` should launch
 
